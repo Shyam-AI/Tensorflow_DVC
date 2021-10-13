@@ -5,6 +5,7 @@ import os
 import shutil
 from tqdm import tqdm     #prints the progress bar when we run the for loop
 
+
 def copy_file(source_download_dir, local_data_dir):
     list_of_files = os.listdir(source_download_dir)
     N = len(list_of_files)
@@ -23,6 +24,7 @@ def get_data(config_path):
     for source_download_dir, local_data_dir in tqdm(zip(source_download_dirs, local_data_dirs), total=2, desc= "list of folders", colour='red'):
         create_directory([local_data_dir])
         copy_file(source_download_dir, local_data_dir)
+
 
 if __name__ == '__main__':
     args = argparse.ArgumentParser()
