@@ -42,6 +42,7 @@ h5py==2.10.0
 idna==3.2
 importlib-metadata==4.8.1
 jmespath==0.10.0
+joblib==1.1.0
 Keras-Preprocessing==1.1.2
 kiwisolver==1.3.2
 mailchecker==4.0.12
@@ -89,6 +90,7 @@ shtab==1.4.1
 six==1.16.0
 smmap==4.0.0
 speedcopy==2.1.0
+-e git+https://github.com/Shyam-AI/Tensorflow_DVC.git@108628655333e29d71268957e39816b3b2cea462#egg=src
 tabulate==0.8.9
 tensorboard==2.6.0
 tensorboard-data-server==0.6.1
@@ -111,6 +113,3 @@ xmltodict==0.12.0
 yarl==1.7.0
 zc.lockfile==2.0
 zipp==3.6.0
-
-#local setup install
--e .
