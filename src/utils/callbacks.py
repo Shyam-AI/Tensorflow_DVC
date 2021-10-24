@@ -25,3 +25,12 @@ def create_and_save_checkpoint_callbacks(call_back_dir, checkpoint_dir):
     joblib.dump(checkpoint_callbacks, ckpt_callbacks_filepath)
 
     logging.info(f"Checkpoints callback is being saved at {ckpt_callbacks_filepath}")
+
+
+def get_callbacks(callback_dir_path):
+    callback_path = [os.path.join(callback_dir_path, bin_file) for bin_file in os.listdir(callback_dir_path)
+    if bin_file.endswith(".cb")]
+
+    call_backs = [joblib.load(path) for path in callback_path]
+    logging.info(f"saved call_bakcs are loaded from {callback_dir_path}")
+    return call_backs
