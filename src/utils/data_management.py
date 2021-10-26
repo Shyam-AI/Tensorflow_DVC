@@ -45,5 +45,5 @@ def train_valid_generator(data_dir, IMAGE_SIZE, BATCH_SIZE, do_data_augmentation
         shuffle = False,
         **dataflow_kwargs
     )
-    logging.info(f"Training and valid generato has been created")
+    logging.info(f"Training and valid generator has been created")
     return train_generator, valid_generator
