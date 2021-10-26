@@ -49,7 +49,7 @@ def train_model(config_path, params_path):
 
     )
     logging.info(f"Training done!!!!")
-    trained_model_dir = artifacts["TRAINED_MODEL_DIR"]
+    trained_model_dir = os.path.join(artifacts_dir, artifacts["TRAINED_MODEL_DIR"])
     create_directory([trained_model_dir])
 
     model_path = get_unique_path_to_save_model(trained_model_dir)
@@ -65,7 +65,7 @@ if __name__ == '__main__':
     args = argparse.ArgumentParser()
 
     args.add_argument("--config", "-c", default="config/config.yaml")
-    args.add_argument("--params", "-p", default="param.yaml")
+    args.add_argument("--params", "-p", default="params.yaml")
  
     parsed_args = args.parse_args()
 
