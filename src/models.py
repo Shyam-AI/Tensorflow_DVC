@@ -49,6 +49,6 @@ def load_full_model(untrained_full_model_path):
 def get_unique_path_to_save_model(trained_model_dir, default_model_name="Model"):
     timestamp = get_timestamp(default_model_name)
     unique_model_name = f"{timestamp}.h5"
-    unique_model_path = os.path.join(trained_model_dir, unique_model_name)\
+    unique_model_path = os.path.join(trained_model_dir, unique_model_name)
 
     return unique_model_path
